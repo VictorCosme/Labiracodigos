@@ -16,6 +16,12 @@ print("")
 questao = int(input("Digite: "))
 print("----------------------------------------------")
 
+while questao < 1 or questao > 10:
+  print("Esta é uma opção inválida!")
+  print("")
+  questao = int(input("Digite: "))
+  print("----------------------------------------------")
+
 #QUESTÃO 1 - SOMA DE TRÊS NÚMEROS
 if questao == 1:
   print("Escolheste Soma de três números!")
@@ -204,4 +210,3 @@ if questao == 9:
 
 
 #implementar uma opção para voltar ao começo para selecionar outra questão
-# Se, no menu, escolherem questao < 1 OU questa > 10, indicar que a opção é inválida
