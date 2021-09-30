@@ -256,7 +256,41 @@ while voltar_menu == "s":
       print("Escolheste Experiências!")
       print(" ")
 
-      #escrever programa aqui
+      numero_casos_de_teste = int(input("Quantos casos de teste queres adicionar? "))
+      total_coelho = 0
+      total_sapo = 0
+      total_rato = 0
+
+      while 0 < numero_casos_de_teste:
+        entrada = input("Digite (Ex. 5 C): ").split()
+
+        quantidade = int(entrada[0])
+        tipo = entrada[1]
+
+        if tipo == "C":
+          total_coelho = total_coelho + quantidade
+        
+        if tipo == "S":
+          total_sapo = total_sapo + quantidade
+
+        if tipo == "R":
+          total_rato = total_rato + quantidade  
+
+        numero_casos_de_teste = numero_casos_de_teste - 1
+
+      total_cobaia = total_coelho + total_sapo + total_rato
+      percent_coelho = (total_coelho * 100) / total_cobaia 
+      percent_sapo = (total_sapo * 100) / total_cobaia 
+      percent_rato = (total_rato * 100) / total_cobaia 
+
+      print("")
+      print("Total:", total_cobaia, "cobaias")
+      print("Total de coelhos:", total_coelho)
+      print("Total de ratos:", total_rato)
+      print("Total de sapos:", total_sapo)
+      print("Percentual de coelhos: {:2.2f}".format(percent_coelho), "%")
+      print("Percentual de ratos: {:2.2f}".format(percent_rato), "%")
+      print("Percentual de sapos: {:2.2f}".format(percent_sapo), "%")
 
       print("")
       repetir_questao = input("Deseja repetir (s ou n)? ")
@@ -267,3 +301,5 @@ while voltar_menu == "s":
   print("----------------------------------------------")
 
 print("Tchau, tchau! :)")
+
+#em "Idade em dias", há um problema que faz com que as saídas nao coincidam a partir de 360 dias
