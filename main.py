@@ -296,10 +296,9 @@ while voltar_menu == "s":
       repetir_questao = input("Deseja repetir (s ou n)? ")
       print("----------------------------------------------")
 
-  print("")
   voltar_menu = input("Deseja voltar ao Menu (s ou n)? ")
   print("----------------------------------------------")
 
-print("Tchau, tchau! :)")
+print("Okay! Tchau, tchau! :)")
 
 #em "Idade em dias", há um problema que faz com que as saídas nao coincidam a partir de 360 dias
