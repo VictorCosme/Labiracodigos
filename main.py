@@ -117,18 +117,17 @@ while voltar_menu == "s":
       num2 = float(input("Digite o segundo: "))
       operacao = input("Escolha uma operação (+, -, *, /): ")
 
+      print(" ")
+
       if operacao == "+":
         print(num1 + num2)
-
-      if operacao == "-":
+      elif operacao == "-":
         print(num1 - num2)
-
-      if operacao == "*":
+      elif operacao == "*":
         print(num1 * num2)
-
-      if operacao == "/":
+      elif operacao == "/":
         if num2 == 0:
-            print("Não se pode dividir por 0")
+          print("Não se pode dividir por 0")
         else:
           print(num1 / num2)
         
