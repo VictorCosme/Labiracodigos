@@ -1,3 +1,36 @@
+def soma_de_tres_numeros():
+  parcelas = input("Digite três inteiros separados por espaço: ").split()
+  soma = int(parcelas[0]) + int(parcelas[1]) + int(parcelas[2])
+
+  print("A soma dos três inteiros é: ", soma)
+
+def quadrilha():
+  homem = input("Digite quatro nomes masculinos separados por espaço: ").split()
+  mulher = input("Agora, digite três femininos separados por espaço: ").split()
+
+  print(" ")
+  
+  print(homem[0] + " amava " + mulher[0] + " que amava " + homem[1])
+  print("que amava " + mulher[1] + " que amava " + homem[2] + " que amava " + mulher[2])
+  print("que não amava ninguém.")
+  print(homem[0] + " foi para os Estados Unidos, " + mulher[0] + " para o convento,")
+  print(homem[1] + " morreu de desastre, " + mulher[1] + " ficou para a tia,")
+  print(homem[2] + " suicidou-se e " + mulher[2] + " casou com " + homem[3])
+  print("que não tinha entrado na história.")
+
+def sucessor_e_antecessor():
+  numero_do_pedido = int(input("Qual o númedo do pedido? "))
+  antecessor = numero_do_pedido - 1
+  sucessor = numero_do_pedido + 1
+
+  print(" ")
+  if numero_do_pedido == 1:
+    print("O sucessor do pedido", numero_do_pedido, "é", sucessor)
+
+  else: 
+    print("O antecessor do pedido", numero_do_pedido, "é", antecessor)
+    print("O sucessor do pedido", numero_do_pedido, "é", sucessor)
+
 voltar_menu = "s"
 
 print("Sê bem-vindo(a)!")
@@ -31,64 +64,29 @@ while voltar_menu == "s":
   while repetir_questao == "s":
     #QUESTÃO 1 - SOMA DE TRÊS NÚMEROS
     if opcao == 1:
-      print("Escolheste Soma de três números!")
-      print(" ")
+      print("Escolheste Soma de três números!\n ")
 
-      num1 = int(input("Digite o primeiro número inteiro: "))
-      num2 = int(input("Digite o segundo: "))
-      num3 = int(input("E agora o terceiro: "))
-      soma = num1 + num2 + num3
+      soma_de_tres_numeros()
 
-      print(" ")
-      print("A soma dos números é", soma)
-
-      print("")
-      repetir_questao = input("Deseja repetir (s ou n)? ")
+      repetir_questao = input(" \nDeseja repetir (s ou n)? ")
       print("----------------------------------------------")
 
     # QUESTÃO 2 - QUADRILHA
     if opcao == 2: 
-      print("Escolheste Quadrilha!")
-      print(" ")
+      print("Escolheste Quadrilha!\n ")
       
-      homem1 = input("Digite um nome masculino: ")
-      mulher1 = input("Agora, um feminino: ")
-      homem2 = input("E outro masculino: ")
-      mulher2 = input("E feminino: ")
-      homem3 = input("Masculino novamente: ")
-      mulher3 = input("Feminino outra vez: ")
-      homem4 = input("E, por fim, outro masculino: ")
-      print(" ")
-      print(homem1 + " amava " + mulher1 + " que amava " + homem2)
-      print("que amava " + mulher2 + " que amava " + homem3 + " que amava " + mulher3)
-      print("que não amava ninguém.")
-      print(homem1 + " foi para os Estados Unidos, " + mulher1 + " para o convento,")
-      print(homem2 + " morreu de desastre, " + mulher2 +" ficou para a tia,")
-      print(homem3 + " suicidou-se e " + mulher3 + " casou com " + homem4)
-      print("que não tinha entrado na história.")
+      quadrilha()
 
-      print("")
-      repetir_questao = input("Deseja repetir (s ou n)? ")
+      repetir_questao = input(" \nDeseja repetir (s ou n)? ")
       print("----------------------------------------------")
 
     #QUESTÃO 3 - SUCESSOR E ANTECESSOR
     if opcao == 3:
-      print("Escolheste Sucessor e Antecessor!")
-      print(" ")
+      print("Escolheste Sucessor e Antecessor!\n ")
 
-      numero_do_pedido = int(input("Qual o númedo do pedido? "))
-      antecessor = numero_do_pedido - 1
-      sucessor = numero_do_pedido + 1
+      sucessor_e_antecessor()
 
-      print(" ")
-      if numero_do_pedido == 1:
-        print("O sucessor do pedido", numero_do_pedido, "é", sucessor)
-      else: 
-        print("O antecessor do pedido", numero_do_pedido, "é", antecessor)
-        print("O sucessor do pedido", numero_do_pedido, "é", sucessor)
-
-      print("")
-      repetir_questao = input("Deseja repetir (s ou n)? ")
+      repetir_questao = input(" \nDeseja repetir (s ou n)? ")
       print("----------------------------------------------")
 
     #QUESTÃO 4 - PAR OU ÍMPAR
@@ -136,6 +134,7 @@ while voltar_menu == "s":
       print("----------------------------------------------")
 
     #QUESTÃO 6 - IDADE EM DIAS
+    #um problema faz com que as saídas nao coincidam a partir de 360 dias
     if opcao == 6:
       print("Escolheste Idade em Dias!")
       print(" ")
@@ -299,5 +298,3 @@ while voltar_menu == "s":
   print("----------------------------------------------")
 
 print("Okay! Tchau, tchau! :)")
-
-#em "Idade em dias", há um problema que faz com que as saídas nao coincidam a partir de 360 dias
