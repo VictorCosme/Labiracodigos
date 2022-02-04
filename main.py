@@ -30,53 +30,38 @@ while voltar_menu == "s":
   while repetir_questao == "s":
     if opcao == 1:
       soma_de_tres_numeros()
-      repetir_questao = input("\nDeseja repetir (s ou n)? ")
-      print("----------------------------------------------")
     
     elif opcao == 2:
       quadrilha()
-      repetir_questao = input("\nDeseja repetir (s ou n)? ")
-      print("----------------------------------------------")
     
     elif opcao == 3:
       sucessor_e_antecessor()
-      repetir_questao = input("\nDeseja repetir (s ou n)? ")
-      print("----------------------------------------------")
 
     elif opcao == 4:
       par_ou_impar()
-      repetir_questao = input("\nDeseja repetir (s ou n)? ")
-      print("----------------------------------------------")
 
     elif opcao == 5:
       calculadora_simples()
-      repetir_questao = input("\nDeseja repetir (s ou n)? ")
-      print("----------------------------------------------")
 
     elif opcao == 6:
       idade_em_dias()
-      repetir_questao = input("\nDeseja repetir (s ou n)? ")
-      print("----------------------------------------------")
 
     elif opcao == 7:
       menor_e_maior_de_tres_numeros()
-      repetir_questao = input("\nDeseja repetir (s ou n)? ")
-      print("----------------------------------------------")
 
     elif opcao == 8:
       fatorial()
-      repetir_questao = input("\nDeseja repetir (s ou n)? ")
-      print("----------------------------------------------")
 
     elif opcao == 9:
       media_da_sequencia()
-      repetir_questao = input("\nDeseja repetir (s ou n)? ")
-      print("----------------------------------------------")
 
     else:
       experiencias()
+
+    repetir_questao = input("\nDeseja repetir (s ou n)? ")
+    print("----------------------------------------------")  
   
-  voltar_menu = input("Deseja voltar ao Menu (s ou n)? ")
+  voltar_menu = input("\nDeseja voltar ao Menu (s ou n)? ")
   print("----------------------------------------------")
 
-print("Okay! Tchau, tchau! :)")
+print("\nOkay! Tchau, tchau! :)")
